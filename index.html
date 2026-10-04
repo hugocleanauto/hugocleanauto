@@ -139,10 +139,10 @@
     ul.nav-menu-desktop { display:none !important; }
     ul.nav-menu {
       display:none; position:fixed; top:58px; right:0;
-      width:220px;
+      width:100%; left:0; right:0;
       background:#2d2d2d; flex-direction:column; padding:1rem 1.5rem; gap:.7rem;
-      text-align:right; box-shadow:-2px 4px 12px rgba(0,0,0,0.5);
-      border-radius:0 0 0 8px; z-index:9998;
+      text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.5);
+      z-index:9998;
     }
     ul.nav-menu.open { display:flex; }
     .nav-contact-btn { margin:.5rem 0 0; width:100%; text-align:center; padding:.5rem; font-size:13px; }
@@ -350,6 +350,8 @@
     #selecteur-vehicule { grid-template-columns:repeat(2,1fr) !important; max-width:600px !important; }
   }
   @media (max-width:640px) {
+  footer .container > div { grid-template-columns:1fr !important; }
+  footer .container > div > * { min-width:0; word-break:break-word; }
 
     #selecteur-vehicule { grid-template-columns:1fr !important; }
     .vehicles-grid { grid-template-columns:1fr !important; }
