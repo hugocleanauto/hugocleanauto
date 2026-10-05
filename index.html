@@ -363,6 +363,26 @@
     .modal-body { padding:1rem; }
   }
 </style>
+
+<style>
+  .leaflet-popup-content-wrapper {
+    background: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.3) !important;
+    padding: 4px !important;
+    min-width: 180px !important;
+  }
+  .leaflet-popup-content {
+    color: #1a1a1a !important;
+    font-family: Inter, sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin: 10px 14px !important;
+  }
+  .leaflet-popup-tip {
+    background: #fff !important;
+  }
+</style>
 </head>
 <body>
 
@@ -706,7 +726,7 @@
           });
           L.marker([49.6333, 2.2833], {icon: icon})
             .addTo(map)
-            .bindPopup("<b>Hugo Clean Auto</b><br>Breteuil, 60120<br>Hauts-de-France")
+            .bindPopup("<b>Hugo Clean Auto</b><br>Breteuil, 60120<br>Hauts-de-France", {minWidth: 180})
             .openPopup();
           // Zone circle
           L.circle([49.6333, 2.2833], {
@@ -735,7 +755,7 @@
         <div style="background:#1a88d8;border-radius:10px;padding:1.2rem 1.5rem;">
           <p style="font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:.3rem;">📍 Vous n'êtes pas dans la liste ?</p>
           <p style="font-family:Inter,sans-serif;font-size:12px;color:rgba(255,255,255,0.85);">Contactez-moi directement, j'étudie chaque demande selon la distance.</p>
-          <a href="tel:0627601031" style="display:inline-block;margin-top:.8rem;background:#fff;color:#1a88d8;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;padding:.8rem 1.5rem;border-radius:25px;text-decoration:none;letter-spacing:.05em;">📞 06 27 60 10 31</a>
+          <a href="tel:0627601031" onclick="if(!confirm('Appeler le 06 27 60 10 31 ?')) return false;" style="display:inline-block;margin-top:.8rem;background:#fff;color:#1a88d8;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;padding:.8rem 1.5rem;border-radius:25px;text-decoration:none;letter-spacing:.05em;">📞 06 27 60 10 31</a>
         </div>
       </div>
 
